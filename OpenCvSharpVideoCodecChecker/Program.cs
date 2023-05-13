@@ -27,13 +27,13 @@ static string CreateVideos(IEnumerable<Mat> sourceMats, string extension)
         var writeFilename = codec.WriteFilename;
 
         Console.WriteLine(sep);
-        Console.WriteLine($"Start {codec.Name} ({writeFilename})");
+        Console.WriteLine($"Start {writeFilename}");
 
         var success = TryCreateVideFile(sourceMats, writeFilename, codec.FourCc);
         var filesize = new FileInfo(writeFilename).Length;
 
         Console.WriteLine($"Result -> {success,-5} ({filesize,10} Byte)");
-        log.AppendLine($"*** {codec.Name,-4} | {extension} -> {success,-5} ({filesize,10} Byte)");
+        log.AppendLine($"{codec.Index,3} | {codec.Name,-4} | {extension} -> {success,-5} ({filesize,10} Byte)");
         File.Delete(writeFilename);
     }
     return log.ToString();

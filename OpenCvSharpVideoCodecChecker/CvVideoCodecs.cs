@@ -21,20 +21,22 @@ internal static class CvVideoCodecs
 
         int index = 0;
         foreach (var fourCcNames in enumerateAllFourCCNames())
-        {
-            // 拡張子がなければ生成に失敗します。
-            // コーデックが見つからない場合、拡張子から別のコーデックに差し替える動作のようです。
-            // 拡張子指定（"avi", "mov"）で同じコーデック指定時でも動作結果が変化します。ムズイ。
-            var writeFilename = $"{index++:D3}_{fourCcNames}{extension}";
-
-            yield return new CvVideoCodec(fourCcNames, writeFilename);
-        }
+            yield return new CvVideoCodec(fourCcNames, index++, extension);
     }
 }
 
-internal sealed record CvVideoCodec(string Name, FourCC FourCc, string WriteFilename)
+internal sealed record CvVideoCodec(
+    string Name, FourCC FourCc, string WriteFilename, int Index)
 {
-    public CvVideoCodec(string codecName, string writeFilename)
-        : this(codecName, FourCC.FromString(codecName), writeFilename)
+    public CvVideoCodec(string codecName, int index, string extension)
+        : this(codecName, FourCC.FromString(codecName), GetFilename(codecName, index, extension), index)
     { }
+
+    private static string GetFilename(string codecName, int index, string extension)
+    {
+        // 拡張子がなければ生成に失敗します。
+        // コーデックが見つからない場合、拡張子から別のコーデックに差し替える動作のようです。
+        // 拡張子指定（"avi", "mov"）で同じコーデック指定時でも動作結果が変化します。ムズイ。
+        return $"{index++:D3}_{codecName}{extension}";
+    }
 }
