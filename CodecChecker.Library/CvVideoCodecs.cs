@@ -1,14 +1,14 @@
 ﻿using System.Reflection;
 using OpenCvSharp;
 
-namespace OpenCvSharpVideoCodecChecker;
+namespace CodecChecker.Library;
 
 /// <summary>
 /// Get all candidates for Video Cordecs.
 /// </summary>
-internal static class CvVideoCodecs
+public static class CvVideoCodecs
 {
-    internal static IEnumerable<CvVideoCodec> EnumerateCvVideoCodec(string extension)
+    public static IEnumerable<CvVideoCodec> EnumerateCvVideoCodec(string extension)
     {
         static IEnumerable<string> enumerateAllFourCCNames()
         {
@@ -25,7 +25,7 @@ internal static class CvVideoCodecs
     }
 }
 
-internal sealed record CvVideoCodec(
+public sealed record CvVideoCodec(
     string Name, FourCC FourCc, string WriteFilename, int Index)
 {
     public CvVideoCodec(string codecName, int index, string extension)

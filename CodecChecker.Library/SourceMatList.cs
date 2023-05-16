@@ -1,22 +1,24 @@
 ﻿using System.Collections;
 using OpenCvSharp;
 
-namespace OpenCvSharpVideoCodecChecker;
+namespace CodecChecker.Library;
 
 /// <summary>
 /// Prepare source mats for video to be created.
 /// </summary>
-internal sealed record SourceMatList : IReadOnlyList<Mat>, IDisposable
+public sealed record SourceMatList : IReadOnlyList<Mat>, IDisposable
 {
-    private readonly IReadOnlyList<Mat> _mats;
+    private readonly List<Mat> _mats;
 
     public Mat this[int index] => _mats[index];
     public int Count => _mats.Count;
 
-    public SourceMatList(string directory = ".\\Resources")
+    private SourceMatList(string directory)
     {
-        _mats = EnumerateSourceMats(directory).ToArray();
+        _mats = EnumerateSourceMats(directory).ToList();
     }
+
+    public static SourceMatList Create(string directory = ".\\Resources") => new(directory);
 
     private static IEnumerable<Mat> EnumerateSourceMats(string directory)
     {

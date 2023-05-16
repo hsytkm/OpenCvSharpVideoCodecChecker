@@ -3,7 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenCvSharpVideoCodecChecker", "OpenCvSharpVideoCodecChecker\OpenCvSharpVideoCodecChecker.csproj", "{A6C8D4B8-1770-4059-A37E-7D6AD064D098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodecChecker.Library", "CodecChecker.Library\CodecChecker.Library.csproj", "{9DFF2576-22E4-4FF2-8645-B61A081E10C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodecChecker.Exe", "CodecChecker.Exe\CodecChecker.Exe.csproj", "{6D1DA2AD-B43D-4906-A467-EF64C4A375C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodecChecker.Test", "CodecChecker.Test\CodecChecker.Test.csproj", "{2F00DC4E-313C-43A3-B98E-6F5B4C2318E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EEAFF143-941F-49B1-BB5C-A53C2AA17DFD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6C8D4B8-1770-4059-A37E-7D6AD064D098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6C8D4B8-1770-4059-A37E-7D6AD064D098}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6C8D4B8-1770-4059-A37E-7D6AD064D098}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6C8D4B8-1770-4059-A37E-7D6AD064D098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFF2576-22E4-4FF2-8645-B61A081E10C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFF2576-22E4-4FF2-8645-B61A081E10C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFF2576-22E4-4FF2-8645-B61A081E10C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFF2576-22E4-4FF2-8645-B61A081E10C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D1DA2AD-B43D-4906-A467-EF64C4A375C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D1DA2AD-B43D-4906-A467-EF64C4A375C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D1DA2AD-B43D-4906-A467-EF64C4A375C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D1DA2AD-B43D-4906-A467-EF64C4A375C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F00DC4E-313C-43A3-B98E-6F5B4C2318E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F00DC4E-313C-43A3-B98E-6F5B4C2318E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F00DC4E-313C-43A3-B98E-6F5B4C2318E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F00DC4E-313C-43A3-B98E-6F5B4C2318E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

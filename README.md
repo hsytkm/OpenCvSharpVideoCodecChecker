@@ -6,7 +6,7 @@ Check which codecs can export video file.
 
 
 
-#### .avi
+### .NET 7 + .avi
 
 ```
   0 | AVC  | .avi -> False (         0 Byte)
@@ -54,7 +54,9 @@ Check which codecs can export video file.
  42 | X264 | .avi -> False (         0 Byte)
 ```
 
-#### .mov
+
+
+### .NET 7 + .mov
 
 ```
   0 | AVC  | .mov -> True  (  15615969 Byte)
@@ -99,6 +101,110 @@ Check which codecs can export video file.
  39 | WMV3 | .mov -> True  (   3119664 Byte)
  40 | WVC1 | .mov -> True  (   3111989 Byte)
  41 | XVID | .mov -> True  (   1250502 Byte)
+ 42 | X264 | .mov -> True  (  15615969 Byte)
+```
+
+
+
+### .NET Fw4.8 + .avi
+
+ .NET7 と違って全然作成されない。。
+
+```
+  0 | AVC  | .avi -> False (         0 Byte)
+  1 | CVID | .avi -> False (         0 Byte)
+  2 | DIB  | .avi -> False (         0 Byte)
+  3 | DIV3 | .avi -> False (         0 Byte)
+  4 | DIVX | .avi -> False (         0 Byte)
+  5 | DV25 | .avi -> False (         0 Byte)
+  6 | DV50 | .avi -> False (         0 Byte)
+  7 | DVC  | .avi -> False (         0 Byte)
+  8 | DVH1 | .avi -> False (         0 Byte)
+  9 | DVHD | .avi -> False (         0 Byte)
+ 10 | DVSD | .avi -> False (         0 Byte)
+ 11 | DVSL | .avi -> False (         0 Byte)
+ 12 | H261 | .avi -> False (         0 Byte)
+ 13 | H263 | .avi -> False (         0 Byte)
+ 14 | H264 | .avi -> False (         0 Byte)
+ 15 | H265 | .avi -> False (         0 Byte)
+ 16 | HEVC | .avi -> False (         0 Byte)
+ 17 | I420 | .avi -> False (         0 Byte)
+ 18 | IV32 | .avi -> False (         0 Byte)
+ 19 | IV41 | .avi -> False (         0 Byte)
+ 20 | IV50 | .avi -> False (         0 Byte)
+ 21 | IYUB | .avi -> False (         0 Byte)
+ 22 | IYUV | .avi -> False (         0 Byte)
+ 23 | MJPG | .avi -> True  (  16564252 Byte)
+ 24 | M4S2 | .avi -> False (         0 Byte)
+ 25 | MP42 | .avi -> False (         0 Byte)
+ 26 | MP43 | .avi -> False (         0 Byte)
+ 27 | MP4S | .avi -> False (         0 Byte)
+ 28 | MP4V | .avi -> False (         0 Byte)
+ 29 | MPG1 | .avi -> False (         0 Byte)
+ 30 | MPG2 | .avi -> False (         0 Byte)
+ 31 | MPG4 | .avi -> False (         0 Byte)
+ 32 | MSS1 | .avi -> False (         0 Byte)
+ 33 | MSS2 | .avi -> False (         0 Byte)
+ 34 | MSVC | .avi -> False (         0 Byte)
+ 35 | JPEG | .avi -> False (         0 Byte)
+ 36 | PIM1 | .avi -> False (         0 Byte)
+ 37 | WMV1 | .avi -> False (         0 Byte)
+ 38 | WMV2 | .avi -> False (         0 Byte)
+ 39 | WMV3 | .avi -> False (         0 Byte)
+ 40 | WVC1 | .avi -> False (         0 Byte)
+ 41 | XVID | .avi -> False (         0 Byte)
+ 42 | X264 | .avi -> False (         0 Byte)
+```
+
+
+
+### .NET Fw4.8 + .mov
+
+ .NET7 と似た感じだけど微妙に異なる。。
+
+```
+  0 | AVC  | .mov -> True  (  15615969 Byte)
+  1 | CVID | .mov -> True  (  15615969 Byte)
+  2 | DIB  | .mov -> True  (  15615969 Byte)
+  3 | DIV3 | .mov -> True  (  15615969 Byte)
+  4 | DIVX | .mov -> True  (  15615969 Byte)
+  5 | DV25 | .mov -> True  (  15615969 Byte)
+  6 | DV50 | .mov -> True  (  15615969 Byte)
+  7 | DVC  | .mov -> True  (  15615969 Byte)
+  8 | DVH1 | .mov -> True  (  15615969 Byte)
+  9 | DVHD | .mov -> True  (  15615969 Byte)
+ 10 | DVSD | .mov -> True  (  15615969 Byte)
+ 11 | DVSL | .mov -> True  (  15615969 Byte)
+ 12 | H261 | .mov -> True  (  15615969 Byte)
+ 13 | H263 | .mov -> False (         0 Byte)
+ 14 | H264 | .mov -> True  (  15615969 Byte)
+ 15 | H265 | .mov -> True  (  15615969 Byte)
+ 16 | HEVC | .mov -> True  (  15615969 Byte)
+ 17 | I420 | .mov -> True  (  15615969 Byte)
+ 18 | IV32 | .mov -> True  (  15615969 Byte)
+ 19 | IV41 | .mov -> True  (  15615969 Byte)
+ 20 | IV50 | .mov -> True  (  15615969 Byte)
+ 21 | IYUB | .mov -> True  (  15615969 Byte)
+ 22 | IYUV | .mov -> True  (  15615969 Byte)
+ 23 | MJPG | .mov -> False (         0 Byte)
+ 24 | M4S2 | .mov -> False (         0 Byte)
+ 25 | MP42 | .mov -> True  (  15615969 Byte)
+ 26 | MP43 | .mov -> False (         0 Byte)
+ 27 | MP4S | .mov -> False (         0 Byte)
+ 28 | MP4V | .mov -> False (         0 Byte)
+ 29 | MPG1 | .mov -> False (         0 Byte)
+ 30 | MPG2 | .mov -> True  (  15615969 Byte)
+ 31 | MPG4 | .mov -> True  (  15615969 Byte)
+ 32 | MSS1 | .mov -> False (         0 Byte)
+ 33 | MSS2 | .mov -> False (         0 Byte)
+ 34 | MSVC | .mov -> True  (  15615969 Byte)
+ 35 | JPEG | .mov -> True  (  15615969 Byte)
+ 36 | PIM1 | .mov -> True  (  15615969 Byte)
+ 37 | WMV1 | .mov -> True  (   1747262 Byte)
+ 38 | WMV2 | .mov -> True  (   1159757 Byte)
+ 39 | WMV3 | .mov -> True  (   3119664 Byte)
+ 40 | WVC1 | .mov -> True  (   3111989 Byte)
+ 41 | XVID | .mov -> True  (  15615969 Byte)
  42 | X264 | .mov -> True  (  15615969 Byte)
 ```
 
